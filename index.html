@@ -1,0 +1,443 @@
+# WangJiaYang-resume
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>王家扬 · 个人简历 | 品牌经理 / 内容运营</title>
+<meta name="description" content="王家扬 — 3年运营经验，字节跳动抖音运营背景，诚拾瓜子品牌经理。擅长新品0→1、数据驱动决策与全链路内容营销。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#141414;
+    --paper:#FBF7EF;
+    --pink:#FF5C8A;
+    --blue:#3B82F6;
+    --yellow:#FFD43B;
+    --green:#22C55E;
+    --purple:#8B5CF6;
+    --orange:#FB923C;
+    --border:2.5px solid var(--ink);
+    --shadow:6px 6px 0 var(--ink);
+    --shadow-sm:4px 4px 0 var(--ink);
+    --radius:18px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:"Space Grotesk","Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif;
+    background:var(--paper);
+    color:var(--ink);
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  .wrap{max-width:1120px;margin:0 auto;padding:0 28px;}
+  section{padding:88px 0;}
+
+  /* ===== 导航 ===== */
+  header{position:sticky;top:0;z-index:100;background:rgba(251,247,239,.92);backdrop-filter:blur(10px);border-bottom:var(--border);}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:72px;}
+  .brand{display:flex;align-items:center;gap:11px;text-decoration:none;color:var(--ink);font-weight:700;font-size:20px;}
+  .brand-badge{width:36px;height:36px;background:var(--pink);border:var(--border);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:20px;font-weight:700;color:#fff;box-shadow:3px 3px 0 var(--ink);}
+  .nav-links{display:flex;gap:6px;list-style:none;}
+  .nav-links a{text-decoration:none;color:var(--ink);font-weight:600;font-size:15px;padding:8px 15px;border-radius:999px;border:2.5px solid transparent;transition:all .15s ease;}
+  .nav-links a:hover{border-color:var(--ink);background:var(--yellow);box-shadow:3px 3px 0 var(--ink);transform:translate(-1px,-1px);}
+  .nav-links a.active{background:var(--ink);color:#fff;}
+  .nav-cta{background:var(--ink);color:#fff;border:var(--border);padding:9px 18px;border-radius:999px;font-weight:700;font-size:14px;text-decoration:none;box-shadow:3px 3px 0 rgba(20,20,20,.25);transition:all .15s;}
+  .nav-cta:hover{background:var(--pink);transform:translate(-1px,-1px);box-shadow:4px 4px 0 var(--ink);}
+
+  /* ===== 通用 ===== */
+  .eyebrow{display:inline-block;font-weight:700;font-size:13px;letter-spacing:2px;text-transform:uppercase;background:var(--ink);color:var(--paper);padding:5px 14px;border-radius:999px;margin-bottom:18px;}
+  .sec-title{font-size:clamp(28px,5vw,44px);font-weight:700;line-height:1.15;margin-bottom:14px;}
+  .sec-sub{color:#555;font-size:16px;max-width:620px;margin-bottom:42px;}
+  .tag{display:inline-block;background:#fff;border:var(--border);border-radius:999px;padding:5px 13px;font-size:13px;font-weight:600;box-shadow:2px 2px 0 var(--ink);}
+  .card{background:#fff;border:var(--border);border-radius:var(--radius);box-shadow:var(--shadow);}
+
+  /* ===== HERO ===== */
+  .hero{padding:72px 0 64px;}
+  .hero-grid{display:grid;grid-template-columns:1.5fr 1fr;gap:48px;align-items:center;}
+  .hero h1{font-size:clamp(46px,8vw,82px);font-weight:700;line-height:.98;letter-spacing:-1px;}
+  .hero h1 .hl{background:var(--yellow);padding:0 8px;box-decoration-break:clone;-webkit-box-decoration-break:clone;border-radius:6px;display:inline-block;transform:rotate(-1.5deg);}
+  .hero .role{font-size:clamp(18px,2.6vw,24px);font-weight:600;margin:18px 0 14px;color:#333;}
+  .hero .role b{color:var(--pink);}
+  .hero p.lead{font-size:17px;color:#444;max-width:520px;margin-bottom:26px;}
+  .hero-actions{display:flex;gap:14px;flex-wrap:wrap;}
+  .btn{display:inline-flex;align-items:center;gap:8px;text-decoration:none;font-weight:700;font-size:15px;padding:13px 24px;border:var(--border);border-radius:14px;box-shadow:var(--shadow-sm);transition:all .14s;cursor:pointer;}
+  .btn-primary{background:var(--ink);color:#fff;}
+  .btn-primary:hover{background:var(--pink);transform:translate(-2px,-2px);box-shadow:6px 6px 0 var(--ink);}
+  .btn-ghost{background:#fff;color:var(--ink);}
+  .btn-ghost:hover{background:var(--yellow);transform:translate(-2px,-2px);box-shadow:6px 6px 0 var(--ink);}
+  .hero-meta{display:flex;gap:10px;flex-wrap:wrap;margin-top:26px;}
+  .hero-meta .tag{background:var(--paper);}
+  .avatar{aspect-ratio:1;background:linear-gradient(135deg,var(--blue),var(--purple));border:var(--border);border-radius:26px;box-shadow:var(--shadow);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;}
+  .avatar span{font-size:clamp(90px,16vw,150px);font-weight:700;color:#fff;line-height:1;text-shadow:5px 5px 0 rgba(20,20,20,.25);}
+  .avatar img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:3;}
+  .avatar img{display:none;}
+  .avatar.has-photo img{display:block;}
+  .avatar.has-photo span{display:none;}
+  .avatar .deco{position:absolute;z-index:4;font-size:13px;font-weight:700;color:var(--ink);background:var(--yellow);border:2px solid var(--ink);padding:4px 10px;border-radius:8px;transform:rotate(-8deg);}
+  .avatar .d1{top:18px;left:18px;}
+  .avatar .d2{bottom:20px;right:18px;background:var(--green);transform:rotate(6deg);}
+
+  /* ===== 数据亮点 ===== */
+  .stats{display:grid;grid-template-columns:repeat(5,1fr);gap:18px;}
+  .stat{background:#fff;border:var(--border);border-radius:var(--radius);box-shadow:var(--shadow-sm);padding:22px 18px;text-align:center;transition:transform .15s;}
+  .stat:hover{transform:translate(-2px,-2px);box-shadow:6px 6px 0 var(--ink);}
+  .stat .num{font-size:clamp(26px,4vw,38px);font-weight:700;line-height:1;}
+  .stat .lbl{font-size:13px;color:#555;margin-top:8px;font-weight:600;}
+  .stat:nth-child(1) .num{color:var(--pink);}
+  .stat:nth-child(2) .num{color:var(--blue);}
+  .stat:nth-child(3) .num{color:var(--purple);}
+  .stat:nth-child(4) .num{color:var(--orange);}
+  .stat:nth-child(5) .num{color:var(--green);}
+
+  /* ===== 个人优势 ===== */
+  .adv-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
+  .adv{padding:28px 24px;}
+  .adv .ico{width:48px;height:48px;border:var(--border);border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:24px;margin-bottom:16px;box-shadow:3px 3px 0 var(--ink);}
+  .adv:nth-child(1) .ico{background:var(--pink);}
+  .adv:nth-child(2) .ico{background:var(--blue);}
+  .adv:nth-child(3) .ico{background:var(--green);}
+  .adv h3{font-size:19px;font-weight:700;margin-bottom:10px;}
+  .adv p{font-size:15px;color:#444;}
+
+  /* ===== 工作经历 ===== */
+  .timeline{position:relative;margin-top:10px;}
+  .timeline::before{content:"";position:absolute;left:22px;top:8px;bottom:8px;width:3px;background:var(--ink);}
+  .job{position:relative;padding:0 0 36px 64px;}
+  .job:last-child{padding-bottom:0;}
+  .job .dot{position:absolute;left:11px;top:6px;width:26px;height:26px;border:var(--border);border-radius:50%;background:var(--yellow);box-shadow:2px 2px 0 var(--ink);}
+  .job:nth-child(2) .dot{background:var(--blue);}
+  .job:nth-child(3) .dot{background:var(--green);}
+  .job-card{padding:24px 26px;}
+  .job-head{display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:8px;margin-bottom:4px;}
+  .job-head h3{font-size:21px;font-weight:700;}
+  .job-co{font-weight:600;color:var(--pink);font-size:16px;}
+  .job-date{font-size:13px;font-weight:700;background:var(--ink);color:var(--paper);padding:5px 12px;border-radius:999px;white-space:nowrap;}
+  .job ul{margin:14px 0 0;padding-left:18px;}
+  .job ul li{font-size:15px;color:#333;margin-bottom:9px;}
+  .job ul li::marker{color:var(--pink);font-weight:700;}
+  .pill-row{display:flex;gap:8px;flex-wrap:wrap;margin-top:16px;}
+  .pill{font-size:12px;font-weight:700;background:var(--paper);border:2px solid var(--ink);border-radius:999px;padding:4px 11px;}
+
+  /* ===== 技能 ===== */
+  .skill-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
+  .skill-col{padding:26px 24px;}
+  .skill-col:nth-child(1){background:var(--blue);color:#fff;}
+  .skill-col:nth-child(2){background:var(--purple);color:#fff;}
+  .skill-col:nth-child(3){background:var(--orange);color:var(--ink);}
+  .skill-col h3{font-size:18px;font-weight:700;margin-bottom:16px;display:flex;align-items:center;gap:8px;}
+  .skill-col .chip{display:inline-block;background:rgba(255,255,255,.92);color:var(--ink);border:2px solid var(--ink);border-radius:10px;padding:6px 12px;font-size:14px;font-weight:700;margin:0 8px 10px 0;box-shadow:2px 2px 0 var(--ink);}
+  .skill-col:nth-child(3) .chip{background:#fff;}
+  .skill-col p{font-size:14px;font-weight:500;}
+
+  /* ===== 教育 ===== */
+  .edu{padding:30px 32px;display:flex;align-items:center;gap:24px;flex-wrap:wrap;}
+  .edu .badge{width:64px;height:64px;flex:0 0 auto;background:var(--green);border:var(--border);border-radius:16px;display:flex;align-items:center;justify-content:center;font-size:30px;box-shadow:3px 3px 0 var(--ink);}
+  .edu h3{font-size:20px;font-weight:700;}
+  .edu .meta{color:#555;font-size:15px;font-weight:600;}
+  .edu .work{margin-top:6px;font-size:14px;color:#333;}
+  .edu .work b{color:var(--ink);}
+
+  /* ===== 联系 ===== */
+  .contact{background:var(--ink);color:var(--paper);border-radius:26px;padding:48px 40px;box-shadow:var(--shadow);text-align:center;}
+  .contact h2{font-size:clamp(26px,5vw,40px);font-weight:700;margin-bottom:12px;}
+  .contact p{color:#cfc9bd;font-size:16px;max-width:560px;margin:0 auto 28px;}
+  .contact-links{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;}
+  .contact-links a{text-decoration:none;font-weight:700;color:var(--ink);background:var(--paper);border:2.5px solid var(--paper);border-radius:14px;padding:13px 22px;box-shadow:4px 4px 0 rgba(255,255,255,.25);transition:all .14s;display:inline-flex;align-items:center;gap:8px;}
+  .contact-links a:hover{background:var(--yellow);border-color:var(--yellow);transform:translate(-2px,-2px);box-shadow:6px 6px 0 rgba(255,255,255,.4);}
+
+  /* ===== 页脚 ===== */
+  footer{border-top:var(--border);padding:30px 0;text-align:center;color:#666;font-size:14px;}
+  footer .yr{font-weight:700;color:var(--ink);}
+
+  .reveal{opacity:0;transform:translateY(28px);transition:opacity .6s ease,transform .6s ease;}
+  .reveal.in{opacity:1;transform:none;}
+
+  /* ===== 响应式 ===== */
+  @media(max-width:900px){
+    .hero-grid{grid-template-columns:1fr;}
+    .avatar{max-width:300px;margin:0 auto;}
+    .stats{grid-template-columns:repeat(2,1fr);}
+    .adv-grid,.skill-grid{grid-template-columns:1fr;}
+    .nav-links{display:none;}
+  }
+  @media(max-width:520px){
+    .stats{grid-template-columns:1fr;}
+    section{padding:60px 0;}
+    .job{padding-left:52px;}
+    .timeline::before{left:16px;}
+    .job .dot{left:5px;}
+  }
+  @media print{
+    header,.hero-actions,.contact-links,.nav-cta{display:none;}
+    body{background:#fff;}
+    .card,.stat,.job-card{box-shadow:none;}
+    section{padding:30px 0;}
+  }
+</style>
+</head>
+<body>
+
+<!-- 导航 -->
+<header>
+  <div class="wrap nav">
+    <a href="#top" class="brand"><span class="brand-badge">王</span>王家扬</a>
+    <ul class="nav-links">
+      <li><a href="#about">关于</a></li>
+      <li><a href="#exp">经历</a></li>
+      <li><a href="#skills">技能</a></li>
+      <li><a href="#edu">教育</a></li>
+      <li><a href="#contact">联系</a></li>
+    </ul>
+    <a href="#contact" class="nav-cta">应聘联系 →</a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="top">
+  <div class="wrap hero-grid">
+    <div>
+      <h1>王家扬<span class="hl">.</span></h1>
+      <div class="role">品牌经理 · <b>内容运营专家</b> · 新品 0→1 操盘手</div>
+      <p class="lead">字节跳动抖音运营背景，3年实战沉淀。从大厂方法论到快消品落地，主导 4–5 款新品从概念走到货架，用数据与内容双轮驱动品牌增长。</p>
+      <div class="hero-actions">
+        <a href="#exp" class="btn btn-primary">查看经历 ↓</a>
+        <a href="#contact" class="btn btn-ghost">联系我</a>
+      </div>
+      <div class="hero-meta">
+        <span class="tag">📍 重庆</span>
+        <span class="tag">🎂 27 岁</span>
+        <span class="tag">💼 3 年经验</span>
+        <span class="tag">📞 13251314434</span>
+      </div>
+    </div>
+    <div class="avatar">
+      <span>王</span>
+      <img src="avatar.jpg" alt="王家扬" onload="this.parentElement.classList.add('has-photo')" onerror="this.remove()">
+      <span class="deco d1">品牌经理</span>
+      <span class="deco d2">数据驱动</span>
+    </div>
+  </div>
+</section>
+
+<!-- 数据亮点 -->
+<section style="padding-top:0;">
+  <div class="wrap">
+    <div class="stats reveal">
+      <div class="stat"><div class="num" data-target="4" data-suffix="">0</div><div class="lbl">新品 0→1 主导</div></div>
+      <div class="stat"><div class="num" data-target="5" data-suffix="+">0</div><div class="lbl">累计新品落地</div></div>
+      <div class="stat"><div class="num" data-target="90" data-suffix="万+">0</div><div class="lbl">全链路曝光</div></div>
+      <div class="stat"><div class="num" data-target="8" data-suffix="人+">0</div><div class="lbl">团队管理规模</div></div>
+      <div class="stat"><div class="num" data-target="27" data-suffix="%">0</div><div class="lbl">互动率提升</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- 关于 / 个人优势 -->
+<section id="about">
+  <div class="wrap">
+    <span class="eyebrow">关于我</span>
+    <h2 class="sec-title">把大厂方法，<br>变成可落地的生意。</h2>
+    <p class="sec-sub">不是只会写方案的人。从市场调研、供应链打样到内容传播、团队管理，我能一个人顶一个环节，也能带着团队把事做完。</p>
+    <div class="adv-grid">
+      <div class="card adv reveal">
+        <div class="ico">🚀</div>
+        <h3>从 0 到 1 的产品力</h3>
+        <p>字节运营背景 + 快消实战。作为产品核心负责人完成 4 款新品 0→1 落地，亲跑重庆至广州 10+ 城市，3000+ 罐装、90 万+ 全链路曝光，高压下稳定交付。</p>
+      </div>
+      <div class="card adv reveal">
+        <div class="ico">📊</div>
+        <h3>数据 + AI 决策力</h3>
+        <p>懂流量算法与平台框架，持续钻研 AI（workflow / agent）与 Python / SQL。用爬虫抓竞品、搭营收预测模型，让定价与卖点都有量化依据。</p>
+      </div>
+      <div class="card adv reveal">
+        <div class="ico">🎬</div>
+        <h3>全链路内容力</h3>
+        <p>从前期摄影到后期视频全流程自洽，覆盖文案、运营、视频、客服。对外商务谈判与公关，对内推进多部门协作，责任心强、重交付质量。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 工作经历 -->
+<section id="exp" style="background:#fff7e0;border-top:var(--border);border-bottom:var(--border);">
+  <div class="wrap">
+    <span class="eyebrow">工作经历</span>
+    <h2 class="sec-title">三年，三段跃迁。</h2>
+    <p class="sec-sub">从记者现场采编，到字节内容策略，再到品牌全盘操盘——每一步都在把"会做"变成"能做主"。</p>
+    <div class="timeline">
+
+      <div class="job reveal">
+        <div class="dot"></div>
+        <div class="card job-card">
+          <div class="job-head">
+            <div><h3>品牌经理</h3><div class="job-co">诚拾瓜子</div></div>
+            <span class="job-date">2025.03 – 2026.06</span>
+          </div>
+          <ul>
+            <li><b>产品 0→1 与供应链：</b>负责从概念到上架全流程，亲自对接工厂完成打样、试产到量产，实地优化流水线，协调工厂/设计/仓库，搭建 SOP，推动 5 款+ 新品落地。</li>
+            <li><b>品牌定位与策略：</b>基于市场与竞品判断目标人群与对标，季度内完成 2 次品牌定位梳理与策略校准。</li>
+            <li><b>数据分析 & 竞品调研：</b>用 Python 爬虫抓取品类与竞品数据，搭建营收预测模型；实地探访核心竞品供应链，完成成本结构与风险评估。</li>
+            <li><b>活动策划与执行：</b>统筹小红书/抖音/B站/快手内容矩阵；主导与电影《海底沙漠》联名，路演 10+ 城市、观众 3000+、品牌合作 5+。</li>
+            <li><b>团队管理：</b>负责文案/运营/视频/客服招聘与日常管理，团队稳定 8 人+。</li>
+          </ul>
+          <div class="pill-row">
+            <span class="pill">新品 0→1</span><span class="pill">供应链管理</span><span class="pill">Python 爬虫</span><span class="pill">营收预测模型</span><span class="pill">联名营销</span><span class="pill">团队管理</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="job reveal">
+        <div class="dot"></div>
+        <div class="card job-card">
+          <div class="job-head">
+            <div><h3>抖音运营（内容评估与策略）</h3><div class="job-co">重庆字节跳动科技有限公司</div></div>
+            <span class="job-date">2023.10 – 2024.12</span>
+          </div>
+          <ul>
+            <li><b>用户拆解：</b>基于平台大数据做用户画像拆解，针对知识服务品类定制分发与互动策略，互动参与度提升 27%。</li>
+            <li><b>策略共建：</b>协同算法团队建立内容评估模型，迭代 50+ 核心品类，用户互动率提升 27%、目标客群观看时长增长 13%。</li>
+            <li><b>合规审核：</b>做平台规则压力测试与合规优化，建立标准化审核与传播 SOP，实现 10+ 项规则成功转型。</li>
+          </ul>
+          <div class="pill-row">
+            <span class="pill">内容策略</span><span class="pill">用户画像</span><span class="pill">评估模型</span><span class="pill">合规 SOP</span><span class="pill">大厂方法论</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="job reveal">
+        <div class="dot"></div>
+        <div class="card job-card">
+          <div class="job-head">
+            <div><h3>记者 / 实习生</h3><div class="job-co">重庆华龙网集团股份有限公司</div></div>
+            <span class="job-date">2023.01 – 2023.03</span>
+          </div>
+          <ul>
+            <li><b>现场采编：</b>以纪实摄影与深度叙事为底色，完成 15+ 优质内容交付，在复杂场域拆解信息、整合资源。</li>
+            <li><b>内容交付：</b>参与选题到成稿全流程，日时效压力下稳定产出，练就快速成稿与高质量交付的底子。</li>
+          </ul>
+          <div class="pill-row">
+            <span class="pill">纪实摄影</span><span class="pill">深度叙事</span><span class="pill">现场采编</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- 技能 -->
+<section id="skills">
+  <div class="wrap">
+    <span class="eyebrow">技能证书</span>
+    <h2 class="sec-title">工具箱。</h2>
+    <p class="sec-sub">从平面设计到视频剪辑，从数据分析到 AI 提效——能独立把想法变成成品。</p>
+    <div class="skill-grid">
+      <div class="skill-col reveal">
+        <h3>🗣️ 语言与沟通</h3>
+        <p>普通话二级甲等</p>
+        <p>英语四级（CET-4）</p>
+        <p style="margin-top:10px;">具备优秀的商务沟通、谈判与公关能力。</p>
+      </div>
+      <div class="skill-col reveal">
+        <h3>🤖 AI 与数据</h3>
+        <span class="chip">ChatGPT</span><span class="chip">Midjourney</span><span class="chip">Workflow</span><span class="chip">Agent</span><span class="chip">Python</span><span class="chip">SQL</span><span class="chip">Excel</span>
+      </div>
+      <div class="skill-col reveal">
+        <h3>🎨 内容制作</h3>
+        <span class="chip">Office</span><span class="chip">PS</span><span class="chip">PR</span>
+        <p style="margin-top:12px;">可独立完成从平面设计到视频剪辑的全流程制作，善用 AI 辅助文案与素材处理。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 教育 -->
+<section id="edu" style="background:#fff7e0;border-top:var(--border);border-bottom:var(--border);">
+  <div class="wrap">
+    <span class="eyebrow">教育背景</span>
+    <h2 class="sec-title" style="margin-bottom:30px;">底子，是新闻。</h2>
+    <div class="card edu reveal">
+      <div class="badge">🎓</div>
+      <div style="flex:1;">
+        <h3>重庆外语外事学院</h3>
+        <div class="meta">新闻传媒 · 学士 ｜ 2019.09 – 2023.06</div>
+        <div class="work">在校作品：澎湃新闻 <b>《"亲爱的"回家有多难？》</b></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 联系 -->
+<section id="contact">
+  <div class="wrap">
+    <div class="contact reveal">
+      <h2>正在寻找下一个操盘机会。</h2>
+      <p>品牌 / 运营 / 内容策略方向均可聊。简历、作品与项目细节，欢迎随时联系。</p>
+      <div class="contact-links">
+        <a href="tel:13251314434">📞 13251314434</a>
+        <a href="mailto:scottong98@gmail.com">✉️ scottong98@gmail.com</a>
+        <a href="#" onclick="window.print();return false;">🖨️ 打印 / 保存 PDF</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p>© <span class="yr" id="yr"></span> 王家扬 · 个人简历网站 ｜ 用 ❤️ 与 neobrutalism 手搓</p>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('yr').textContent = new Date().getFullYear();
+
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{
+      if(e.isIntersecting){
+        e.target.classList.add('in');
+        e.target.querySelectorAll('.num[data-target]').forEach(runCounter);
+        io.unobserve(e.target);
+      }
+    });
+  },{threshold:0.15});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+  function runCounter(el){
+    if(el.dataset.done) return;
+    el.dataset.done = '1';
+    const target = +el.dataset.target;
+    const suffix = el.dataset.suffix || '';
+    let cur = 0;
+    const step = Math.max(1, Math.ceil(target/40));
+    const tick = ()=>{
+      cur += step;
+      if(cur >= target){ cur = target; el.textContent = cur + suffix; return; }
+      el.textContent = cur + suffix;
+      requestAnimationFrame(tick);
+    };
+    tick();
+  }
+
+  const sections = ['about','exp','skills','edu','contact'].map(id=>document.getElementById(id)).filter(Boolean);
+  const navMap = {};
+  document.querySelectorAll('.nav-links a').forEach(a=>{
+    const id = a.getAttribute('href').slice(1);
+    navMap[id] = a;
+  });
+  const navIo = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{
+      if(e.isIntersecting){
+        Object.values(navMap).forEach(a=>a.classList.remove('active'));
+        if(navMap[e.target.id]) navMap[e.target.id].classList.add('active');
+      }
+    });
+  },{rootMargin:'-45% 0px -50% 0px'});
+  sections.forEach(s=>navIo.observe(s));
+</script>
+</body>
+</html>
